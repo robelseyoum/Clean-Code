@@ -1,9 +1,9 @@
-package com.robelseyoum3.cleancode.notelist
+package com.robelseyoum3.cleancode.framework.presentation.notelist
 
 import android.os.Bundle
 import android.view.View
 import com.robelseyoum3.cleancode.R
-import com.robelseyoum3.cleancode.common.BaseNoteFragment
+import com.robelseyoum3.cleancode.framework.presentation.common.BaseNoteFragment
 
 //const val NOTE_LIST_STATE_BUNDLE_KEY = "com.codingwithmitch.cleannotes.notes.framework.presentation.notelist.state"
 
