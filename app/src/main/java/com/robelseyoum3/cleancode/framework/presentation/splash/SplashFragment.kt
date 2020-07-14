@@ -1,9 +1,9 @@
-package com.robelseyoum3.cleancode.splash
+package com.robelseyoum3.cleancode.framework.presentation.splash
 
 import android.os.Bundle
 import android.view.View
 import com.robelseyoum3.cleancode.R
-import com.robelseyoum3.cleancode.common.BaseNoteFragment
+import com.robelseyoum3.cleancode.framework.presentation.common.BaseNoteFragment
 
 class SplashFragment : BaseNoteFragment(R.layout.fragment_splash) {
 

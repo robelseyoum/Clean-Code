@@ -1,4 +1,4 @@
-package com.robelseyoum3.cleancode.common
+package com.robelseyoum3.cleancode.framework.presentation.common
 
 import android.content.Context
 import android.os.Bundle

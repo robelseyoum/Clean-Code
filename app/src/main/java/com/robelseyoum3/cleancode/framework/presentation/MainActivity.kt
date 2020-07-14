@@ -1,7 +1,8 @@
-package com.robelseyoum3.cleancode
+package com.robelseyoum3.cleancode.framework.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.robelseyoum3.cleancode.R
 
 class MainActivity : AppCompatActivity() {
 
