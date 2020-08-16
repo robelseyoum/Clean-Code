@@ -1,3 +1,4 @@
+import dependencies.AnnotationProcessing
 import dependencies.dependencies.*
 import dependencies.Application
 import dependencies.Versions
@@ -12,6 +13,10 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
 
+apply plugin: 'com.google.firebase.crashlytics'
+
+apply plugin: 'com.google.gms.google-services'
+
 android {
     compileSdkVersion Versions.compilesdk
     buildToolsVersion "29.0.3"
@@ -23,7 +28,7 @@ android {
         versionCode Application.version_code
         versionName Application.version_name
 
-        testInstrumentationRunner AndroidTestDependencies.test_runner
+        testInstrumentationRunner AndroidTestDependencies.instrumentation_runner
     }
 
     buildTypes {
@@ -53,6 +58,19 @@ dependencies {
     implementation Dependencies.kotlin_standard_library
     implementation Dependencies.kotlin_reflect
     implementation Dependencies.ktx
+
+
+    //dependencies
+    implementation Dependencies.dagger
+    implementation Dependencies.firebase_firestore
+    implementation Dependencies.firebase_auth
+    implementation Dependencies.firebase_analytics
+    implementation Dependencies.firebase_crashlytics
+
+
+    //Annotation Processing
+    kapt AnnotationProcessing.room_compiler
+    kapt AnnotationProcessing.dagger_compiler
 
     // Support
     implementation SupportDependencies.appcompat
