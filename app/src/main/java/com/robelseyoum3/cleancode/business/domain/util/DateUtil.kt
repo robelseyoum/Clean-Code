@@ -8,8 +8,7 @@ import javax.inject.Singleton
 
 @Singleton
 class DateUtil @Inject constructor(
-    private val dateFormat: SimpleDateFormat
-) {
+    private val dateFormat: SimpleDateFormat) {
 
     //date format: "2020-07-23 HH:mm:ss"
     //2020-97-23
