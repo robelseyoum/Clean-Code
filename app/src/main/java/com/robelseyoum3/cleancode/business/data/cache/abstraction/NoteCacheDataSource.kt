@@ -4,9 +4,9 @@ import com.robelseyoum3.cleancode.business.domain.model.Note
 
 interface NoteCacheDataSource {
 
-    suspend fun insertNote(note: Note): Long
+    suspend fun insertNote(note: Note): Long //return type of insert SQLlight statement(Long)
 
-    suspend fun insertNotes(notes: List<Note>): LongArray
+    suspend fun insertNotes(notes: List<Note>): LongArray //for testing purpose
 
     suspend fun deleteNote(primary: String): Int
 
