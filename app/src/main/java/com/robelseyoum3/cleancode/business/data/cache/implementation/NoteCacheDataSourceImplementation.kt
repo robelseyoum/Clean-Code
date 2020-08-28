@@ -2,6 +2,7 @@ package com.robelseyoum3.cleancode.business.data.cache.implementation
 
 import com.robelseyoum3.cleancode.business.data.cache.abstraction.NoteCacheDataSource
 import com.robelseyoum3.cleancode.business.domain.model.Note
+import com.robelseyoum3.cleancode.framework.datasource.cache.abstraction.NoteDaoService
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -18,7 +19,9 @@ class NoteCacheDataSourceImplementation @Inject constructor(private val noteDaoS
 
     override suspend fun updateNote(primaryKey: String, newTitle: String, newBody: String): Int = noteDaoService.updateNote(primaryKey, newTitle, newBody)
 
-    override suspend fun searchNote(query: String, filterAndOrder: String, page: Int): List<Note> = noteDaoService.searchNote(query, filterAndOrder, page)
+    override suspend fun searchNote(query: String, filterAndOrder: String, page: Int): List<Note> =
+        TODO("check filterAndOrder and make query")
+//        noteDaoService.searchNote(query, filterAndOrder, page)
 
     override suspend fun searchNoteById(primaryKey: String): Note? = noteDaoService.searchNoteById(primaryKey)
 
