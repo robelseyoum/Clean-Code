@@ -38,7 +38,6 @@ abstract class ApiResponseHandler<ViewState, Data>(
                 }
 
                 is ApiResult.Success -> {
-
                     if(response.value == null) {
                         DataState.error(
                             response = Response(
@@ -53,7 +52,6 @@ abstract class ApiResponseHandler<ViewState, Data>(
                         handleSuccess(resultObj = response.value)
                     }
                 }
-
             }
         }
 

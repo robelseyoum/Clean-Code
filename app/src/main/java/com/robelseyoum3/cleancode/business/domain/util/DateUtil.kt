@@ -12,7 +12,6 @@ class DateUtil @Inject constructor(
 
     //date format: "2020-07-23 HH:mm:ss"
     //2020-97-23
-
     fun removeTimeFromDateString(sd: String): String{
         return sd.substring(0, sd.indexOf(" "))
     }
@@ -21,10 +20,9 @@ class DateUtil @Inject constructor(
         return Timestamp(timestamp.toDate())
     }
 
-    fun convertStringToFirebaseTimestamp(date: String): Timestamp{
+    fun convertStringToFirebaseTimestamp(date: String): Timestamp {
         return Timestamp(dateFormat.parse(date))
     }
-
 
     fun getCurrentTimeStamp(): String{
         return dateFormat.format(Date())

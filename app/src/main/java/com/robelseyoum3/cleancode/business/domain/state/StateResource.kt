@@ -42,20 +42,16 @@ sealed class MessageType{
 
 
 interface StateMessageCallback{
-
     fun removeMessageFromStack()
 }
 
 
 interface AreYouSureCallback {
-
     fun proceed()
-
     fun cancel()
 }
 
 interface SnackbarUndoCallback {
-
     fun undo()
 }
 
@@ -63,15 +59,12 @@ class SnackbarUndoListener
 constructor(
     private val snackbarUndoCallback: SnackbarUndoCallback?
 ): View.OnClickListener {
-
     override fun onClick(v: View?) {
         snackbarUndoCallback?.undo()
     }
-
 }
 
 
 interface DialogInputCaptureCallback {
-
     fun onTextCaptured(text: String)
 }
